@@ -38,15 +38,13 @@ else
     exit 1
 fi
 
-# git@gitlab.com:blair.james.hpw.qld.gov.au/java8_docker_image.git
-# git@gitlab.com:blairjames/java8_docker_image.git
 # Push to github - Triggers builds in github and Dockerhub.
 git () {
     git="sudo /usr/bin/git -C /home/docker/java8_docker_image"
-    $git pull git@gitlab.com:blair.james.hpw.qld.gov.au/java8_docker_image.git \
+    $git pull git@github.com:blairjames/java8_docker_image.git \
         | tee -a $log || except "git pull failed!"
     $git add --all >> $log || except "git add failed!"
-    $git commit -a -m 'Automatic build $timestp' >> $log || except "git commit failed!"
+    $git commit -a -m 'Automatic build '$timestp >> $log || except "git commit failed!"
     $git push | tee -a $log || except "git push failed!"
 }
 
