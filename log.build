@@ -190,3 +190,36 @@ Successfully tagged blairy/java8:20200806_204615
 20200806_204616 - Build completed successfully.
 
 
+[master 254d5ea] Automatic build 20200806_204615
+ 2 files changed, 18 insertions(+), 4 deletions(-)
+20200806_204624 - git completed successfully.
+The push refers to repository [docker.io/blairy/java8]
+35782a310ffa: Preparing
+0d218d970945: Preparing
+0d218d970945: Layer already exists
+35782a310ffa: Layer already exists
+20200806_204615: digest: sha256:1337caee1955252060e6d3b940810cbc248f4845824252cf4bcb65e6be6f115c size: 740
+20200806_204638 - Docker push completed successfully.
+
+
+20200806_204638 - All completed successfully
+20200806_211544 - Starting Build.
+
+Sending build context to Docker daemon  88.58kB
+Step 1/3 : FROM alpine:20200626@sha256:156f59dc1cbe233827642e09ed06e259ef6fa1ca9b2e29d52ae14d5e7b79d7f0
+ ---> 3c791e92a856
+Step 2/3 : RUN apk update &&     apk add --no-cache     curl     git     util-linux     openjdk8     maven
+ ---> Using cache
+ ---> a979f6d5455e
+Step 3/3 : ENTRYPOINT ["/bin/sh"]
+ ---> Using cache
+ ---> e2d2574412bb
+Successfully built e2d2574412bb
+Successfully tagged blairy/java8:20200806_211544
+20200806_211544 - Build completed successfully.
+
+
+Java test Failed!
+20200806_211545 - Tests completed successfully.
+
+

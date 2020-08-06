@@ -1,7 +1,19 @@
+#!/usr/bin/env bash
 
-# test java -version and mvn -version
-if docker run --rm blairy/java8:$timestp -version; then
-    
+# Test Java and Maven will display their version details.
+if docker run --rm $1 java -version; then
+    echo "Java test passed."
+    if docker run --rm $1 mvn -version; then
+        echo "Maven test passed."
+        exit 0
+    else
+        echo "Maven test Failed!"
+        exit 1
+    fi
 else
-    except "Tests failed!"
+    echo "Java test Failed!"
+    exit 1
 fi
+
+echo "Context escaped!"
+exit 1

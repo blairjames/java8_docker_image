@@ -1,10 +1,10 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # -------------------------------------------------------------------------+ 
 # Build, Test, Push, Deploy Simple Java8 Development environment container | 
 # -------------------------------------------------------------------------+
 
 # Env Vars for SSH.
-source $HOME/.ssh/agent/env|| . $HOME/.ssh/agent/env
+source $HOME/.ssh/agent/env || . $HOME/.ssh/agent/env
 
 # Log file
 log="/home/docker/java8_docker_image/log.build"
@@ -29,12 +29,19 @@ except () {
 timestp=$(timestamp)
 logger "Starting Build.\n"
 
-
 # Build the image using timestamp as tag.
-if sudo /usr/bin/docker build /home/docker/java8_docker_image -t blairy/java8:$timestp >> $log; then
+if sudo /usr/bin/docker build /home/docker/java8_docker_image -t blairy/java8:$timestp | tee -a $log; then
     logger "Build completed successfully.\n\n"
 else
     logger "Build FAILED!! Aborting.\n\n"
+    exit 1
+fi
+
+# Run Tests
+if /home/docker/java8_docker_image/test_script.sh blairy/java8:$timestp | tee -a $log; then
+    logger "Tests completed successfully.\n\n"
+else
+    logger "******  WARNING!!  --  Tests FAILED!!  Aborting. ******\n\n"
     exit 1
 fi
 
@@ -43,8 +50,8 @@ git () {
     git="sudo /usr/bin/git -C /home/docker/java8_docker_image"
     $git pull git@github.com:blairjames/java8_docker_image.git \
         | tee -a $log || except "git pull failed!"
-    $git add --all >> $log || except "git add failed!"
-    $git commit -a -m 'Automatic build '$timestp >> $log || except "git commit failed!"
+    $git add --all | tee -a $log || except "git add failed!"
+    $git commit -a -m 'Automatic build '$timestp | tee -a $log || except "git commit failed!"
     $git push | tee -a $log || except "git push failed!"
 }
 
@@ -57,7 +64,7 @@ else
 fi
 
 # Push the new tag to Dockerhub.
-if sudo docker push blairy/java8:$timestp >> $log; then 
+if sudo docker push blairy/java8:$timestp | tee -a $log; then 
     logger "Docker push completed successfully.\n\n"
 else
     logger "Docker push FAILED!!\n\n"
