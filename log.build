@@ -1,0 +1,176 @@
+20200806_181247 - Starting Build.
+
+20200806_181247 - Build FAILED!! Aborting.
+
+
+20200806_181404 - Starting Build.
+
+Sending build context to Docker daemon  76.29kB
+Step 1/3 : FROM alpine:20200626@sha256:156f59dc1cbe233827642e09ed06e259ef6fa1ca9b2e29d52ae14d5e7b79d7f0
+ ---> 3c791e92a856
+Step 2/3 : RUN apk update &&     apk add --no-cache     curl     git     util-linux     openjdk8     maven
+ ---> Running in 87199d266f9b
+fetch https://dl-cdn.alpinelinux.org/alpine/edge/main/x86_64/APKINDEX.tar.gz
+fetch https://dl-cdn.alpinelinux.org/alpine/edge/community/x86_64/APKINDEX.tar.gz
+v20200626-1921-g2901562184 [https://dl-cdn.alpinelinux.org/alpine/edge/main]
+v20200626-1931-g585836c371 [https://dl-cdn.alpinelinux.org/alpine/edge/community]
+OK: 12953 distinct packages available
+fetch https://dl-cdn.alpinelinux.org/alpine/edge/main/x86_64/APKINDEX.tar.gz
+fetch https://dl-cdn.alpinelinux.org/alpine/edge/community/x86_64/APKINDEX.tar.gz
+(1/66) Installing ca-certificates (20191127-r4)
+(2/66) Installing brotli-libs (1.0.7-r5)
+(3/66) Installing nghttp2-libs (1.41.0-r0)
+(4/66) Installing libcurl (7.71.1-r0)
+(5/66) Installing curl (7.71.1-r0)
+(6/66) Installing expat (2.2.9-r1)
+(7/66) Installing pcre2 (10.35-r0)
+(8/66) Installing git (2.28.0-r0)
+(9/66) Installing libffi (3.3-r2)
+(10/66) Installing p11-kit (0.23.20-r5)
+(11/66) Installing libtasn1 (4.16.0-r1)
+(12/66) Installing p11-kit-trust (0.23.20-r5)
+(13/66) Installing java-cacerts (1.0-r0)
+(14/66) Installing nspr (4.27-r0)
+(15/66) Installing sqlite-libs (3.32.3-r0)
+(16/66) Installing nss (3.55-r1)
+(17/66) Installing libxau (1.0.9-r0)
+(18/66) Installing libbsd (0.10.0-r0)
+(19/66) Installing libxdmcp (1.1.3-r0)
+(20/66) Installing libxcb (1.14-r1)
+(21/66) Installing libx11 (1.6.10-r0)
+(22/66) Installing libxcomposite (0.4.5-r0)
+(23/66) Installing libxext (1.3.4-r0)
+(24/66) Installing libxi (1.7.10-r0)
+(25/66) Installing libxrender (0.9.10-r3)
+(26/66) Installing libxtst (1.2.3-r3)
+(27/66) Installing alsa-lib (1.2.3.2-r1)
+(28/66) Installing libbz2 (1.0.8-r1)
+(29/66) Installing libpng (1.6.37-r1)
+(30/66) Installing freetype (2.10.2-r0)
+(31/66) Installing libgcc (9.3.0-r4)
+(32/66) Installing giflib (5.2.1-r0)
+(33/66) Installing libjpeg-turbo (2.0.5-r0)
+(34/66) Installing libstdc++ (9.3.0-r4)
+(35/66) Installing openjdk8-jre-lib (8.252.09-r0)
+(36/66) Installing java-common (0.2-r0)
+(37/66) Installing krb5-conf (1.0-r2)
+(38/66) Installing libcom_err (1.45.6-r0)
+(39/66) Installing keyutils-libs (1.6.3-r0)
+(40/66) Installing libverto (0.3.1-r1)
+(41/66) Installing krb5-libs (1.18.2-r0)
+(42/66) Installing lcms2 (2.11-r0)
+(43/66) Installing pcsc-lite-libs (1.9.0-r0)
+(44/66) Installing liblksctp (1.0.18-r1)
+(45/66) Installing openjdk8-jre-base (8.252.09-r0)
+20200806_181523 - Starting Build.
+
+Sending build context to Docker daemon  78.85kB
+Step 1/3 : FROM alpine:20200626@sha256:156f59dc1cbe233827642e09ed06e259ef6fa1ca9b2e29d52ae14d5e7b79d7f0
+ ---> 3c791e92a856
+Step 2/3 : RUN apk update &&     apk add --no-cache     curl     git     util-linux     openjdk8     maven
+ ---> Running in ea19d9670174
+fetch https://dl-cdn.alpinelinux.org/alpine/edge/main/x86_64/APKINDEX.tar.gz
+fetch https://dl-cdn.alpinelinux.org/alpine/edge/community/x86_64/APKINDEX.tar.gz
+v20200626-1921-g2901562184 [https://dl-cdn.alpinelinux.org/alpine/edge/main]
+v20200626-1931-g585836c371 [https://dl-cdn.alpinelinux.org/alpine/edge/community]
+OK: 12953 distinct packages available
+fetch https://dl-cdn.alpinelinux.org/alpine/edge/main/x86_64/APKINDEX.tar.gz
+fetch https://dl-cdn.alpinelinux.org/alpine/edge/community/x86_64/APKINDEX.tar.gz
+(1/66) Installing ca-certificates (20191127-r4)
+(2/66) Installing brotli-libs (1.0.7-r5)
+(3/66) Installing nghttp2-libs (1.41.0-r0)
+(4/66) Installing libcurl (7.71.1-r0)
+(5/66) Installing curl (7.71.1-r0)
+(6/66) Installing expat (2.2.9-r1)
+(7/66) Installing pcre2 (10.35-r0)
+(8/66) Installing git (2.28.0-r0)
+(9/66) Installing libffi (3.3-r2)
+(10/66) Installing p11-kit (0.23.20-r5)
+(11/66) Installing libtasn1 (4.16.0-r1)
+(12/66) Installing p11-kit-trust (0.23.20-r5)
+(13/66) Installing java-cacerts (1.0-r0)
+(14/66) Installing nspr (4.27-r0)
+(15/66) Installing sqlite-libs (3.32.3-r0)
+(16/66) Installing nss (3.55-r1)
+(17/66) Installing libxau (1.0.9-r0)
+(18/66) Installing libbsd (0.10.0-r0)
+(19/66) Installing libxdmcp (1.1.3-r0)
+(20/66) Installing libxcb (1.14-r1)
+(21/66) Installing libx11 (1.6.10-r0)
+(22/66) Installing libxcomposite (0.4.5-r0)
+(23/66) Installing libxext (1.3.4-r0)
+(24/66) Installing libxi (1.7.10-r0)
+(25/66) Installing libxrender (0.9.10-r3)
+(26/66) Installing libxtst (1.2.3-r3)
+(27/66) Installing alsa-lib (1.2.3.2-r1)
+(28/66) Installing libbz2 (1.0.8-r1)
+(29/66) Installing libpng (1.6.37-r1)
+(30/66) Installing freetype (2.10.2-r0)
+(31/66) Installing libgcc (9.3.0-r4)
+(32/66) Installing giflib (5.2.1-r0)
+(33/66) Installing libjpeg-turbo (2.0.5-r0)
+(34/66) Installing libstdc++ (9.3.0-r4)
+(35/66) Installing openjdk8-jre-lib (8.252.09-r0)
+(36/66) Installing java-common (0.2-r0)
+(37/66) Installing krb5-conf (1.0-r2)
+(38/66) Installing libcom_err (1.45.6-r0)
+(39/66) Installing keyutils-libs (1.6.3-r0)
+(40/66) Installing libverto (0.3.1-r1)
+(41/66) Installing krb5-libs (1.18.2-r0)
+(42/66) Installing lcms2 (2.11-r0)
+(43/66) Installing pcsc-lite-libs (1.9.0-r0)
+(44/66) Installing liblksctp (1.0.18-r1)
+(45/66) Installing openjdk8-jre-base (8.252.09-r0)
+(46/66) Installing openjdk8-jre (8.252.09-r0)
+(47/66) Installing maven (3.6.3-r0)
+(48/66) Installing openjdk8 (8.252.09-r0)
+(49/66) Installing libblkid (2.36-r0)
+(50/66) Installing blkid (2.36-r0)
+(51/66) Installing libcap-ng (0.7.10-r0)
+(52/66) Installing setpriv (2.36-r0)
+(53/66) Installing libmount (2.36-r0)
+(54/66) Installing libsmartcols (2.36-r0)
+(55/66) Installing findmnt (2.36-r0)
+(56/66) Installing mcookie (2.36-r0)
+(57/66) Installing ncurses-terminfo-base (6.2_p20200801-r0)
+(58/66) Installing ncurses-libs (6.2_p20200801-r0)
+(59/66) Installing hexdump (2.36-r0)
+(60/66) Installing lsblk (2.36-r0)
+(61/66) Installing libuuid (2.36-r0)
+(62/66) Installing libfdisk (2.36-r0)
+(63/66) Installing sfdisk (2.36-r0)
+(64/66) Installing cfdisk (2.36-r0)
+(65/66) Installing libeconf (0.3.8-r0)
+(66/66) Installing util-linux (2.36-r0)
+Executing busybox-1.31.1-r21.trigger
+Executing ca-certificates-20191127-r4.trigger
+Executing java-common-0.2-r0.trigger
+OK: 138 MiB in 80 packages
+Removing intermediate container ea19d9670174
+ ---> a979f6d5455e
+Step 3/3 : ENTRYPOINT ["/bin/sh"]
+ ---> Running in 7edc1d902eb0
+Removing intermediate container 7edc1d902eb0
+ ---> e2d2574412bb
+Successfully built e2d2574412bb
+Successfully tagged blairy/java8:20200806_181523
+20200806_181648 - Build completed successfully.
+
+
+[master a28f112] Automatic build $timestp
+ 6 files changed, 200 insertions(+), 44 deletions(-)
+ rewrite README.md (96%)
+ mode change 100644 => 100755
+ delete mode 100755 test_script.py
+ create mode 100755 test_script.sh
+20200806_181652 - git completed successfully.
+The push refers to repository [docker.io/blairy/java8]
+35782a310ffa: Preparing
+0d218d970945: Preparing
+0d218d970945: Mounted from library/alpine
+35782a310ffa: Pushed
+20200806_181523: digest: sha256:1337caee1955252060e6d3b940810cbc248f4845824252cf4bcb65e6be6f115c size: 740
+20200806_183312 - Docker push completed successfully.
+
+
+20200806_183312 - All completed successfully
