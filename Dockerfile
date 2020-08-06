@@ -6,4 +6,4 @@ RUN apk update && \
     util-linux \
     openjdk8 \
     maven
-ENTRYPOINT ["/bin/sh"]
+CMD ["/bin/sh"]

@@ -37,7 +37,8 @@ else
     exit 1
 fi
 
-# Run Tests
+# Run Tests 
+# TODO: FAILURE of test_script.sh does not set the condition to false.... Check the return code.
 if /home/docker/java8_docker_image/test_script.sh blairy/java8:$timestp | tee -a $log; then
     logger "Tests completed successfully.\n\n"
 else

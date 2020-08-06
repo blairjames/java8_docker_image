@@ -6,12 +6,16 @@
 - Clean, single concern container.
 
 #### Usage:
+###### The container can run Java or Maven as executables:
 ``` 
-docker run -it --rm blairy/java8 
+- docker run --rm blairy/java8 java -version
+- docker run --rm blairy/java8 mvn -version
 ```
 
-#### Example Commands:
- - docker run -it --rm blairy/java8 java -version
- - docker run -it --rm blairy/java8 mvn -version
+###### Or as an interactive terminal session by adding the "-it" flags:
+```
+- docker run -it --rm blairy/java8
+```
 
+ ###### Note the "--rm" flag. This removes the container from memory upon exit.
 
