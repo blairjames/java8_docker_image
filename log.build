@@ -1260,3 +1260,42 @@ Maven test passed.
 20200807_174603 - Tests completed successfully.
 
 
+[master 5b54b3b] Automatic build 20200807_174601
+ 1 file changed, 39 insertions(+)
+20200807_174607 - git completed successfully.
+The push refers to repository [docker.io/blairy/java8]
+35782a310ffa: Preparing
+0d218d970945: Preparing
+0d218d970945: Layer already exists
+35782a310ffa: Layer already exists
+20200807_174601: digest: sha256:e4ac0828d0c1f99b09148f18568d3984014f262ad66654d14796f455134418ca size: 740
+20200807_174614 - Docker push completed successfully.
+
+
+20200807_174614 - All completed successfully
+20200807_184601 - Starting Build.
+
+Sending build context to Docker daemon  393.7kB
+Step 1/3 : FROM alpine:20200626@sha256:156f59dc1cbe233827642e09ed06e259ef6fa1ca9b2e29d52ae14d5e7b79d7f0
+ ---> 3c791e92a856
+Step 2/3 : RUN apk update &&     apk add --no-cache     curl     git     util-linux     openjdk8     maven
+ ---> Using cache
+ ---> a979f6d5455e
+Step 3/3 : CMD ["/bin/sh"]
+ ---> Using cache
+ ---> 9ab85f94e7ab
+Successfully built 9ab85f94e7ab
+Successfully tagged blairy/java8:20200807_184601
+20200807_184601 - Build completed successfully.
+
+
+Java test passed.
+Apache Maven 3.6.3 (cecedd343002696d0abb50b32b541b8a6ba2883f)
+Maven home: /usr/share/java/maven-3
+Java version: 1.8.0_252, vendor: IcedTea, runtime: /usr/lib/jvm/java-1.8-openjdk/jre
+Default locale: en_US, platform encoding: UTF-8
+OS name: "linux", version: "5.7.0-2-amd64", arch: "amd64", family: "unix"
+Maven test passed.
+20200807_184603 - Tests completed successfully.
+
+
