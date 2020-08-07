@@ -1035,3 +1035,7 @@ Maven test passed.
 20200807_120202 - Tests completed successfully.
 
 
+[master 35c22e2] Automatic build 20200807_120200
+ 2 files changed, 34 insertions(+), 2 deletions(-)
+20200807_120206 - git completed successfully.
+The push refers to repository [docker.io/blairy/java8]
