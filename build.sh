@@ -4,7 +4,7 @@
 # -------------------------------------------------------------------------+
 
 # Env Vars for SSH.
-source $HOME/.ssh/agent/env || . $HOME/.ssh/agent/env
+source /root/.ssh/agent/root || . /root/.ssh/agent/root
 
 # Log file
 log="/home/docker/java8_docker_image/log.build"
