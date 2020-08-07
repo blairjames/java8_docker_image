@@ -30,7 +30,7 @@ timestp=$(timestamp)
 logger "Starting Build.\n"
 
 # Build the image using timestamp as tag.
-if sudo /usr/bin/docker build /home/docker/java8_docker_image -t blairy/java8:$timestp | tee -a $log; then
+if sudo /usr/bin/docker build /home/docker/java8_docker_image -t docker.io/blairy/java8:$timestp | tee -a $log; then
     logger "Build completed successfully.\n\n"
 else
     logger "Build FAILED!! Aborting.\n\n"
@@ -65,7 +65,7 @@ else
 fi
 
 # Push the new tag to Dockerhub.
-if sudo docker push blairy/java8:$timestp | tee -a $log; then 
+if sudo docker push docker.io/blairy/java8:$timestp | tee -a $log; then 
     logger "Docker push completed successfully.\n\n"
 else
     logger "Docker push FAILED!!\n\n"
