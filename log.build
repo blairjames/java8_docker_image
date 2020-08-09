@@ -2391,3 +2391,25 @@ Maven test passed.
 20200808_224604 - Tests completed successfully.
 
 
+[master 9bf0294] Automatic build 20200808_224601
+ 1 file changed, 39 insertions(+)
+20200808_224608 - git completed successfully.
+The push refers to repository [docker.io/blairy/java8]
+35782a310ffa: Preparing
+0d218d970945: Preparing
+0d218d970945: Layer already exists
+35782a310ffa: Layer already exists
+20200808_224601: digest: sha256:e4ac0828d0c1f99b09148f18568d3984014f262ad66654d14796f455134418ca size: 740
+20200808_224614 - Docker push completed successfully.
+
+
+20200808_224614 - All completed successfully
+20200809_174602 - Starting Build.
+
+20200809_174606 - Build completed successfully.
+
+
+Java test Failed!
+20200809_174634 - Tests completed successfully.
+
+
