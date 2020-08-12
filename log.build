@@ -5178,3 +5178,113 @@ Maven test passed.
 20200812_163803 - Tests completed successfully.
 
 
+[master 455c3a8] Automatic build 20200812_163801
+ 1 file changed, 39 insertions(+)
+20200812_163806 - git completed successfully.
+The push refers to repository [docker.io/blairy/java8]
+35782a310ffa: Preparing
+0d218d970945: Preparing
+35782a310ffa: Layer already exists
+0d218d970945: Layer already exists
+20200812_163801: digest: sha256:e4ac0828d0c1f99b09148f18568d3984014f262ad66654d14796f455134418ca size: 740
+20200812_163813 - Docker push completed successfully.
+
+
+20200812_163813 - All completed successfully
+20200812_173318 - Starting Build.
+
+Sending build context to Docker daemon  1.722MB
+Step 1/3 : FROM alpine:20200626@sha256:156f59dc1cbe233827642e09ed06e259ef6fa1ca9b2e29d52ae14d5e7b79d7f0
+ ---> 3c791e92a856
+Step 2/3 : RUN apk add --no-cache     curl     openssh-client     git     util-linux     openjdk8     maven
+ ---> Running in a7b90d85452c
+fetch https://dl-cdn.alpinelinux.org/alpine/edge/main/x86_64/APKINDEX.tar.gz
+fetch https://dl-cdn.alpinelinux.org/alpine/edge/community/x86_64/APKINDEX.tar.gz
+(1/69) Installing ca-certificates (20191127-r4)
+(2/69) Installing brotli-libs (1.0.7-r5)
+(3/69) Installing nghttp2-libs (1.41.0-r0)
+(4/69) Installing libcurl (7.71.1-r0)
+(5/69) Installing curl (7.71.1-r0)
+(6/69) Installing expat (2.2.9-r1)
+(7/69) Installing pcre2 (10.35-r0)
+(8/69) Installing git (2.28.0-r0)
+(9/69) Installing libffi (3.3-r2)
+(10/69) Installing p11-kit (0.23.20-r5)
+(11/69) Installing libtasn1 (4.16.0-r1)
+(12/69) Installing p11-kit-trust (0.23.20-r5)
+(13/69) Installing java-cacerts (1.0-r0)
+(14/69) Installing nspr (4.27-r0)
+(15/69) Installing sqlite-libs (3.32.3-r0)
+(16/69) Installing nss (3.55-r1)
+(17/69) Installing libxau (1.0.9-r0)
+(18/69) Installing libbsd (0.10.0-r0)
+(19/69) Installing libxdmcp (1.1.3-r0)
+(20/69) Installing libxcb (1.14-r1)
+(21/69) Installing libx11 (1.6.11-r0)
+(22/69) Installing libxcomposite (0.4.5-r0)
+(23/69) Installing libxext (1.3.4-r0)
+(24/69) Installing libxi (1.7.10-r0)
+(25/69) Installing libxrender (0.9.10-r3)
+(26/69) Installing libxtst (1.2.3-r3)
+(27/69) Installing alsa-lib (1.2.3.2-r1)
+(28/69) Installing libbz2 (1.0.8-r1)
+(29/69) Installing libpng (1.6.37-r1)
+(30/69) Installing freetype (2.10.2-r0)
+(31/69) Installing libgcc (9.3.0-r4)
+(32/69) Installing giflib (5.2.1-r0)
+(33/69) Installing libjpeg-turbo (2.0.5-r0)
+(34/69) Installing libstdc++ (9.3.0-r4)
+(35/69) Installing openjdk8-jre-lib (8.252.09-r0)
+(36/69) Installing java-common (0.2-r0)
+(37/69) Installing krb5-conf (1.0-r2)
+(38/69) Installing libcom_err (1.45.6-r0)
+(39/69) Installing keyutils-libs (1.6.3-r0)
+(40/69) Installing libverto (0.3.1-r1)
+(41/69) Installing krb5-libs (1.18.2-r0)
+(42/69) Installing lcms2 (2.11-r0)
+(43/69) Installing pcsc-lite-libs (1.9.0-r0)
+(44/69) Installing liblksctp (1.0.18-r1)
+(45/69) Installing openjdk8-jre-base (8.252.09-r0)
+(46/69) Installing openjdk8-jre (8.252.09-r0)
+(47/69) Installing maven (3.6.3-r0)
+(48/69) Installing openjdk8 (8.252.09-r0)
+(49/69) Installing openssh-keygen (8.3_p1-r0)
+(50/69) Installing ncurses-terminfo-base (6.2_p20200801-r0)
+(51/69) Installing ncurses-libs (6.2_p20200801-r0)
+(52/69) Installing libedit (20191231.3.1-r1)
+(53/69) Installing openssh-client (8.3_p1-r0)
+(54/69) Installing libblkid (2.36-r0)
+(55/69) Installing blkid (2.36-r0)
+(56/69) Installing libcap-ng (0.7.10-r0)
+(57/69) Installing setpriv (2.36-r0)
+(58/69) Installing libmount (2.36-r0)
+(59/69) Installing libsmartcols (2.36-r0)
+(60/69) Installing findmnt (2.36-r0)
+(61/69) Installing mcookie (2.36-r0)
+(62/69) Installing hexdump (2.36-r0)
+(63/69) Installing lsblk (2.36-r0)
+(64/69) Installing libuuid (2.36-r0)
+(65/69) Installing libfdisk (2.36-r0)
+(66/69) Installing sfdisk (2.36-r0)
+(67/69) Installing cfdisk (2.36-r0)
+(68/69) Installing libeconf (0.3.8-r0)
+(69/69) Installing util-linux (2.36-r0)
+Executing busybox-1.31.1-r21.trigger
+Executing ca-certificates-20191127-r4.trigger
+Executing java-common-0.2-r0.trigger
+OK: 142 MiB in 83 packages
+Removing intermediate container a7b90d85452c
+ ---> 8b4fb943db14
+Step 3/3 : CMD ["/bin/sh"]
+ ---> Running in d08ef40d0626
+Removing intermediate container d08ef40d0626
+ ---> 4c0e03691c3f
+Successfully built 4c0e03691c3f
+Successfully tagged blairy/java8:20200812_173318
+20200812_173454 - Build completed successfully.
+
+
+Java test Failed!
+20200812_173454 - Tests completed successfully.
+
+
