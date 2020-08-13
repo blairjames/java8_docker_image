@@ -6143,3 +6143,324 @@ Java test Failed!
 20200813_143809 - Tests completed successfully.
 
 
+[master 9533240] Automatic build 20200813_143801
+ 2 files changed, 46 insertions(+), 2 deletions(-)
+20200813_143812 - git completed successfully.
+The push refers to repository [docker.io/blairy/java8]
+20200813_143813 - Docker push completed successfully.
+
+
+20200813_143813 - All completed successfully
+20200813_153801 - Starting Build.
+
+Sending build context to Docker daemon  2.161MB
+Step 1/13 : FROM alpine:20200626@sha256:156f59dc1cbe233827642e09ed06e259ef6fa1ca9b2e29d52ae14d5e7b79d7f0
+ ---> 3c791e92a856
+Step 2/13 : RUN apk add --no-cache     openssh-client     curl     git     util-linux     openjdk8     maven     spring-boot-openrc     junit     jetty-runner     jetty-runner-openrc
+ ---> Using cache
+ ---> 6adae56447bc
+Step 3/13 : RUN git clone https://github.com/spring-projects/spring-framework.git
+ ---> Using cache
+ ---> 515bab927233
+Step 4/13 : RUN cd spring-framework && ./gradlew build
+ ---> Running in 3f43acc9ccc6
+Downloading https://services.gradle.org/distributions/gradle-6.6-bin.zip
+.........10%..........20%..........30%..........40%.........50%..........60%..........70%..........80%..........90%.........100%
+
+Welcome to Gradle 6.6!
+
+Here are the highlights of this release:
+ - Experimental build configuration caching
+ - Built-in conventions for handling credentials
+ - Java compilation supports --release flag
+
+For more details see https://docs.gradle.org/6.6/release-notes.html
+
+Starting a Gradle Daemon (subsequent builds will be faster)
+> Task :buildSrc:compileJava
+> Task :buildSrc:compileJava FROM-CACHE
+> Task :buildSrc:compileGroovy NO-SOURCE
+> Task :buildSrc:pluginDescriptors
+> Task :buildSrc:processResources
+> Task :buildSrc:classes
+> Task :buildSrc:jar
+> Task :buildSrc:assemble
+> Task :buildSrc:pluginUnderTestMetadata
+> Task :buildSrc:compileTestJava NO-SOURCE
+> Task :buildSrc:compileTestGroovy NO-SOURCE
+> Task :buildSrc:processTestResources NO-SOURCE
+> Task :buildSrc:testClasses UP-TO-DATE
+> Task :buildSrc:test NO-SOURCE
+> Task :buildSrc:validatePlugins FROM-CACHE
+> Task :buildSrc:check UP-TO-DATE
+> Task :buildSrc:build
+> Task :framework-bom:assemble UP-TO-DATE
+> Task :framework-bom:check UP-TO-DATE
+> Task :framework-bom:build UP-TO-DATE
+> Task :compileKotlin NO-SOURCE
+> Task :integration-tests:compileJava NO-SOURCE
+> Task :integration-tests:processResources NO-SOURCE
+> Task :integration-tests:classes UP-TO-DATE
+> Task :compileJava NO-SOURCE
+> Task :compileGroovy NO-SOURCE
+> Task :processResources NO-SOURCE
+> Task :classes UP-TO-DATE
+> Task :integration-tests:jar
+> Task :integration-tests:assemble
+> Task :spring-expression:processResources
+> Task :integration-tests:checkstyleMain NO-SOURCE
+> Task :spring-beans:processResources
+> Task :integration-tests:compileTestFixturesJava NO-SOURCE
+> Task :spring-aop:processResources
+> Task :inspectClassesForKotlinIC
+> Task :spring-jdbc:processResources
+> Task :spring-tx:processResources
+> Task :jar
+> Task :assemble
+> Task :checkstyleMain NO-SOURCE
+> Task :spring-oxm:processResources
+> Task :spring-orm:processResources NO-SOURCE
+> Task :spring-context:processResources
+> Task :spring-web:processResources
+> Task :spring-context-support:processResources
+> Task :spring-messaging:processResources NO-SOURCE
+> Task :spring-webflux:processResources
+> Task :spring-webmvc:processResources
+> Task :spring-websocket:processResources
+> Task :spring-test:processResources
+> Task :integration-tests:processTestResources
+> Task :integration-tests:processTestFixturesResources NO-SOURCE
+> Task :integration-tests:testFixturesClasses UP-TO-DATE
+> Task :integration-tests:checkstyleTestFixtures NO-SOURCE
+> Task :integration-tests:testFixturesJar
+> Task :spring-aop:processTestFixturesResources NO-SOURCE
+> Task :spring-beans:processTestFixturesResources NO-SOURCE
+> Task :spring-tx:processTestFixturesResources NO-SOURCE
+> Task :spring-aop:processTestResources
+> Task :spring-aop:processJmhResources NO-SOURCE
+> Task :spring-aspects:processResources
+> Task :spring-aspects:processTestResources
+> Task :spring-aspects:processJmhResources NO-SOURCE
+> Task :spring-aspects:processTestFixturesResources NO-SOURCE
+> Task :spring-context:processTestFixturesResources NO-SOURCE
+> Task :spring-context-support:processTestFixturesResources NO-SOURCE
+> Task :spring-beans:processTestResources
+> Task :spring-beans:processJmhResources NO-SOURCE
+> Task :spring-instrument:compileJava FROM-CACHE
+> Task :spring-instrument:processResources NO-SOURCE
+> Task :spring-instrument:classes UP-TO-DATE
+> Task :spring-context-indexer:compileJava FROM-CACHE
+> Task :spring-context-indexer:processResources
+> Task :spring-context-indexer:classes
+> Task :spring-context-support:processTestResources
+> Task :spring-instrument:jar
+> Task :spring-context-support:processJmhResources NO-SOURCE
+> Task :spring-expression:processTestResources
+> Task :spring-expression:processJmhResources NO-SOURCE
+> Task :spring-expression:processTestFixturesResources NO-SOURCE
+> Task :spring-instrument:assemble
+> Task :spring-instrument:compileTestFixturesJava NO-SOURCE
+> Task :spring-instrument:compileTestJava NO-SOURCE
+> Task :spring-instrument:processTestResources NO-SOURCE
+> Task :spring-instrument:testClasses UP-TO-DATE
+> Task :spring-instrument:compileJmhJava NO-SOURCE
+> Task :spring-instrument:processJmhResources NO-SOURCE
+> Task :spring-instrument:jmhClasses UP-TO-DATE
+> Task :spring-instrument:checkstyleJmh NO-SOURCE
+> Task :spring-context-indexer:jar
+> Task :spring-context-indexer:assemble
+> Task :spring-context-indexer:compileTestFixturesJava NO-SOURCE
+> Task :spring-context-indexer:processTestResources NO-SOURCE
+> Task :spring-context-indexer:processJmhResources NO-SOURCE
+> Task :spring-jdbc:processTestResources
+> Task :spring-jdbc:processJmhResources NO-SOURCE
+> Task :spring-jdbc:processTestFixturesResources NO-SOURCE
+> Task :spring-jms:processResources
+> Task :spring-jms:processTestResources
+> Task :spring-jms:processJmhResources NO-SOURCE
+> Task :spring-jms:processTestFixturesResources NO-SOURCE
+> Task :spring-messaging:processTestResources
+> Task :spring-messaging:processJmhResources NO-SOURCE
+> Task :spring-messaging:processTestFixturesResources NO-SOURCE
+> Task :spring-context:processTestResources
+> Task :spring-context:processJmhResources NO-SOURCE
+> Task :spring-web:processTestFixturesResources
+> Task :spring-orm:processTestResources
+> Task :spring-orm:processJmhResources NO-SOURCE
+> Task :spring-orm:processTestFixturesResources NO-SOURCE
+> Task :spring-r2dbc:processResources
+> Task :spring-r2dbc:processTestResources
+> Task :spring-r2dbc:processJmhResources NO-SOURCE
+> Task :spring-r2dbc:processTestFixturesResources NO-SOURCE
+> Task :spring-test:processTestResources
+> Task :spring-test:processTestFixturesResources NO-SOURCE
+> Task :spring-core:cglibRepackJar
+> Task :spring-jcl:compileJava FROM-CACHE
+> Task :spring-jcl:processResources
+> Task :spring-jcl:classes
+> Task :spring-jcl:jar
+> Task :spring-jcl:assemble
+> Task :spring-core:objenesisRepackJar
+> Task :spring-core:processResources
+> Task :spring-core:processTestFixturesResources NO-SOURCE
+> Task :spring-core:processTestResources
+> Task :spring-core:processJmhResources NO-SOURCE
+> Task :spring-jcl:compileTestFixturesJava NO-SOURCE
+> Task :spring-jcl:compileTestJava NO-SOURCE
+> Task :spring-jcl:processTestResources NO-SOURCE
+> Task :spring-jcl:testClasses UP-TO-DATE
+> Task :spring-jcl:compileJmhJava NO-SOURCE
+> Task :spring-jcl:processJmhResources NO-SOURCE
+> Task :spring-jcl:jmhClasses UP-TO-DATE
+> Task :spring-jcl:checkstyleJmh NO-SOURCE
+> Task :spring-test:processJmhResources NO-SOURCE
+> Task :spring-tx:processTestResources
+> Task :spring-tx:processJmhResources NO-SOURCE
+> Task :spring-web:processTestResources
+> Task :spring-web:processJmhResources NO-SOURCE
+> Task :spring-webflux:processTestResources
+> Task :spring-webflux:processJmhResources NO-SOURCE
+> Task :spring-webflux:processTestFixturesResources NO-SOURCE
+> Task :spring-webmvc:processTestResources
+> Task :spring-webmvc:processJmhResources NO-SOURCE
+> Task :spring-webmvc:processTestFixturesResources NO-SOURCE
+> Task :spring-websocket:processTestResources
+> Task :spring-websocket:processJmhResources NO-SOURCE
+> Task :spring-websocket:processTestFixturesResources NO-SOURCE
+> Task :checkstyleNohttp FROM-CACHE
+> Task :compileTestFixturesKotlin NO-SOURCE
+> Task :compileTestFixturesJava NO-SOURCE
+> Task :compileTestFixturesGroovy NO-SOURCE
+> Task :processTestFixturesResources NO-SOURCE
+> Task :testFixturesClasses UP-TO-DATE
+> Task :testFixturesJar
+> Task :compileTestKotlin NO-SOURCE
+> Task :compileTestJava NO-SOURCE
+> Task :compileTestGroovy NO-SOURCE
+> Task :processTestResources NO-SOURCE
+> Task :testClasses UP-TO-DATE
+> Task :checkstyleTest NO-SOURCE
+> Task :checkstyleTestFixtures NO-SOURCE
+> Task :test NO-SOURCE
+> Task :check UP-TO-DATE
+> Task :build
+
+> Task :spring-oxm:genJaxb
+[ant:javac] : warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+> Task :spring-oxm:processTestResources
+> Task :spring-oxm:processJmhResources NO-SOURCE
+> Task :spring-oxm:processTestFixturesResources NO-SOURCE
+> Task :kotlin-coroutines:compileKotlin
+> Task :kotlin-coroutines:compileJava NO-SOURCE
+> Task :kotlin-coroutines:processResources NO-SOURCE
+> Task :kotlin-coroutines:classes UP-TO-DATE
+> Task :kotlin-coroutines:inspectClassesForKotlinIC
+> Task :kotlin-coroutines:jar
+> Task :kotlin-coroutines:assemble
+> Task :kotlin-coroutines:checkstyleMain NO-SOURCE
+> Task :kotlin-coroutines:compileTestFixturesKotlin NO-SOURCE
+> Task :kotlin-coroutines:compileTestFixturesJava NO-SOURCE
+> Task :kotlin-coroutines:compileTestKotlin NO-SOURCE
+> Task :kotlin-coroutines:compileTestJava NO-SOURCE
+> Task :kotlin-coroutines:processTestResources NO-SOURCE
+> Task :kotlin-coroutines:testClasses UP-TO-DATE
+> Task :kotlin-coroutines:checkstyleTest NO-SOURCE
+> Task :kotlin-coroutines:processTestFixturesResources NO-SOURCE
+> Task :kotlin-coroutines:testFixturesClasses UP-TO-DATE
+> Task :kotlin-coroutines:checkstyleTestFixtures NO-SOURCE
+> Task :kotlin-coroutines:testFixturesJar
+> Task :kotlin-coroutines:test NO-SOURCE
+> Task :kotlin-coroutines:check UP-TO-DATE
+> Task :kotlin-coroutines:build
+> Task :spring-instrument:checkstyleMain
+> Task :spring-context-indexer:checkstyleMain
+> Task :spring-jcl:checkstyleMain
+> Task :spring-jcl:checkstyleTest NO-SOURCE
+> Task :spring-instrument:checkstyleTest NO-SOURCE
+> Task :spring-instrument:processTestFixturesResources NO-SOURCE
+> Task :spring-jcl:processTestFixturesResources NO-SOURCE
+> Task :spring-instrument:testFixturesClasses UP-TO-DATE
+> Task :spring-jcl:testFixturesClasses UP-TO-DATE
+> Task :spring-context-indexer:processTestFixturesResources NO-SOURCE
+> Task :spring-instrument:checkstyleTestFixtures NO-SOURCE
+> Task :spring-context-indexer:testFixturesClasses UP-TO-DATE
+> Task :spring-jcl:checkstyleTestFixtures NO-SOURCE
+> Task :spring-context-indexer:checkstyleTestFixtures NO-SOURCE
+> Task :spring-instrument:testFixturesJar
+> Task :spring-jcl:testFixturesJar
+> Task :spring-instrument:test NO-SOURCE
+> Task :spring-instrument:check
+> Task :spring-instrument:build
+> Task :spring-jcl:test NO-SOURCE
+> Task :spring-jcl:check
+> Task :spring-jcl:build
+> Task :spring-context-indexer:testFixturesJar
+> Task :spring-core:compileKotlin
+
+[91m/spring-framework/spring-core/src/main/java/org/springframework/core/metrics/jfr/FlightRecorderStartupEvent.java:19: error: package jdk.jfr does not exist
+import jdk.jfr.Category;[0m[91m
+              ^
+[0m[91m/spring-framework/spring-core/src/main/java/org/springframework/core/metrics/jfr/FlightRecorderStartupEvent.java:20: error: package jdk.jfr does not exist[0m[91m
+import jdk.jfr.Description;[0m[91m
+[0m[91m              ^
+[0m> Task :spring-core:compileJava
+[91m/spring-framework/spring-core/src/main/java/org/springframework/core/metrics/jfr/FlightRecorderStartupEvent.java:21: error: package jdk.jfr does not exist[0m[91m
+[0m[91mimport jdk.jfr.Event;
+              ^
+/spring-framework/spring-core/src/main/java/org/springframework/core/metrics/jfr/FlightRecorderStartupEvent.java:22: error: package jdk.jfr does not exist
+import jdk.jfr.Label;
+[0m[91m              ^[0m[91m
+[0m[91m/spring-framework/spring-core/src/main/java/org/springframework/core/metrics/jfr/FlightRecorderStartupEvent.java:37: error: cannot find symbol
+class FlightRecorderStartupEvent extends Event {
+                                         ^
+  symbol: class Event
+/spring-framework/spring-core/src/main/java/org/springframework/core/metrics/jfr/FlightRecorderStartupEvent.java:34: error: cannot find symbol
+@Category("Spring Application")[0m[91m
+ ^
+  symbol: class Category
+/spring-framework/spring-core/src/main/java/org/springframework/core/metrics/jfr/FlightRecorderStartupEvent.java:35: error: cannot find symbol
+@Label("Startup Step")
+ ^[0m[91m
+  symbol: class Label
+/spring-framework/spring-core/src/main/java/org/springframework/core/metrics/jfr/FlightRecorderStartupEvent.java:36: error: cannot find symbol
+@Description("Spring Application Startup")
+ ^
+  symbol: class Description
+[0m[91m/spring-framework/spring-core/src/main/java/org/springframework/core/metrics/jfr/FlightRecorderStartupEvent.java:43: error: cannot find symbol
+	@Label("Name")
+	 ^
+  symbol:   class Label
+[0m[91m  location: class FlightRecorderStartupEvent
+/spring-framework/spring-core/src/main/java/org/springframework/core/metrics/jfr/FlightRecorderStartupEvent.java:46: error: cannot find symbol
+	@Label("Tags")
+	 ^
+  symbol:   class Label
+  location: class FlightRecorderStartupEvent
+[0m
+> Task :spring-core:compileJava FAILED
+[91m
+FAILURE: Build failed with an exception.[0m
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 7.0.
+Use '--warning-mode all' to show the individual deprecation warnings.
+See https://docs.gradle.org/6.6/userguide/command_line_interface.html#sec:command_line_warnings
+67 actionable tasks: 63 executed, 4 from cache
+[91m
+
+* What went wrong:
+Execution failed for task ':spring-core:compileJava'.
+> Compilation failed; see the compiler error output for details.
+
+* Try:
+Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output. Run with --scan to get full insights.
+
+* Get more help at https://help.gradle.org
+
+BUILD FAILED in 8m 12s
+[0m20200813_154616 - Build completed successfully.
+
+
+Java test Failed!
+20200813_154619 - Tests completed successfully.
+
+
