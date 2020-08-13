@@ -1,9 +1,17 @@
 FROM alpine:20200626@sha256:156f59dc1cbe233827642e09ed06e259ef6fa1ca9b2e29d52ae14d5e7b79d7f0
 RUN apk add --no-cache \
-    curl \
     openssh-client \
+    curl \
     git \
     util-linux \
     openjdk8 \
-    maven
+    maven \
+    spring-boot-openrc \
+    junit \
+    jetty-runner \
+    jetty-runner-openrc \
+RUN git clone https://github.com/spring-projects/spring-framework.git
+RUN cd spring-framework && ./gradlew build
+RUN cd spring-framework && ./gradlew build && ./gradlew publishToMavenLocal -x javadoc -x dokka -x asciidoctor
 CMD ["/bin/sh"]
+

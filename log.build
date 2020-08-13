@@ -6107,3 +6107,39 @@ Maven test passed.
 20200813_133805 - Tests completed successfully.
 
 
+[master 58339cc] Automatic build 20200813_133801
+ 1 file changed, 39 insertions(+)
+20200813_133808 - git completed successfully.
+The push refers to repository [docker.io/blairy/java8]
+7bcd46c5ea9b: Preparing
+0d218d970945: Preparing
+0d218d970945: Layer already exists
+7bcd46c5ea9b: Layer already exists
+20200813_133801: digest: sha256:cbe4d50960898ccdddaa03c3cab1e56f72d6ed9b46bd79394038f58528c84974 size: 740
+20200813_133814 - Docker push completed successfully.
+
+
+20200813_133814 - All completed successfully
+20200813_143801 - Starting Build.
+
+Sending build context to Docker daemon  2.141MB
+Step 1/5 : FROM alpine:20200626@sha256:156f59dc1cbe233827642e09ed06e259ef6fa1ca9b2e29d52ae14d5e7b79d7f0
+ ---> 3c791e92a856
+Step 2/5 : RUN apk add --no-cache     openssh-client     curl     git     util-linux     openjdk8     maven     spring-boot-openrc     junit     jetty-runner     jetty-runner-openrc RUN git clone https://github.com/spring-projects/spring-framework.git
+ ---> Running in ccb4ba3808e5
+fetch https://dl-cdn.alpinelinux.org/alpine/edge/main/x86_64/APKINDEX.tar.gz
+fetch https://dl-cdn.alpinelinux.org/alpine/edge/community/x86_64/APKINDEX.tar.gz
+[91mERROR: unsatisfiable constraints:
+[0m  RUN (missing):
+    required by: world[RUN]
+  clone (missing):
+    required by: world[clone]
+  https://github.com/spring-projects/spring-framework.git (missing):
+    required by: world[https://github.com/spring-projects/spring-framework.git]
+20200813_143806 - Build completed successfully.
+
+
+Java test Failed!
+20200813_143809 - Tests completed successfully.
+
+
