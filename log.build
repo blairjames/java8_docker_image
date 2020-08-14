@@ -6464,3 +6464,44 @@ Java test Failed!
 20200813_154619 - Tests completed successfully.
 
 
+[master 3761597] Automatic build 20200813_153801
+ 2 files changed, 330 insertions(+), 2 deletions(-)
+20200813_154623 - git completed successfully.
+The push refers to repository [docker.io/blairy/java8]
+20200813_154624 - Docker push completed successfully.
+
+
+20200813_154624 - All completed successfully
+20200814_174308 - Starting Build.
+
+Sending build context to Docker daemon  2.199MB
+Step 1/4 : FROM alpine:20200626@sha256:156f59dc1cbe233827642e09ed06e259ef6fa1ca9b2e29d52ae14d5e7b79d7f0
+ ---> 3c791e92a856
+Step 2/4 : RUN apk add --no-cache     openssh-client     curl     git     util-linux     openjdk8     maven     spring-boot-openrc     junit     jetty-runner     jetty-runner-openrc
+ ---> Using cache
+ ---> 6adae56447bc
+Step 3/4 : RUN git clone https://github.com/spring-projects/spring-boot.git
+ ---> Running in c383997a036a
+[91mCloning into 'spring-boot'...
+[0m[91mUpdating files:  73% (5093/6927)[0m[91mUpdating files:  74% (5126/6927)[0m[91mUpdating files:  75% (5196/6927)[0m[91mUpdating files:  76% (5265/6927)[0m[91mUpdating files:  77% (5334/6927)[0m[91mUpdating files:  78% (5404/6927)[0m[91mUpdating files:  79% (5473/6927)[0m[91mUpdating files:  80% (5542/6927)[0m[91mUpdating files:  81% (5611/6927)[0m[91mUpdating files:  82% (5681/6927)[0m[91mUpdating files:  83% (5750/6927)[0m[91mUpdating files:  84% (5819/6927)[0m[91mUpdating files:  85% (5888/6927)[0m[91mUpdating files:  86% (5958/6927)[0m[91mUpdating files:  87% (6027/6927)[0m[91mUpdating files:  88% (6096/6927)[0m[91mUpdating files:  89% (6166/6927)[0m[91mUpdating files:  90% (6235/6927)[0m[91mUpdating files:  91% (6304/6927)[0m[91mUpdating files:  92% (6373/6927)[0m[91mUpdating files:  93% (6443/6927)[0m[91mUpdating files:  94% (6512/6927)[0m[91mUpdating files:  95% (6581/6927)[0m[91mUpdating files:  96% (6650/6927)[0m[91mUpdating files:  97% (6720/6927)[0m[91mUpdating files:  98% (6789/6927)[0m[91mUpdating files:  99% (6858/6927)[0m[91mUpdating files: 100% (6927/6927)Updating files: 100% (6927/6927), done.
+[0mRemoving intermediate container c383997a036a
+ ---> c594ac154c52
+Step 4/4 : CMD ["/bin/sh"]
+ ---> Running in 3489e0b18bb7
+Removing intermediate container 3489e0b18bb7
+ ---> c64fad9cec45
+Successfully built c64fad9cec45
+Successfully tagged blairy/java8:20200814_174308
+20200814_174528 - Build completed successfully.
+
+
+Java test passed.
+Apache Maven 3.6.3 (cecedd343002696d0abb50b32b541b8a6ba2883f)
+Maven home: /usr/share/java/maven-3
+Java version: 1.8.0_252, vendor: IcedTea, runtime: /usr/lib/jvm/java-1.8-openjdk/jre
+Default locale: en_US, platform encoding: UTF-8
+OS name: "linux", version: "5.7.0-2-amd64", arch: "amd64", family: "unix"
+Maven test passed.
+20200814_174531 - Tests completed successfully.
+
+
