@@ -11,8 +11,6 @@ RUN apk add --no-cache \
     jetty-runner \
     jetty-runner-openrc 
 RUN git clone https://github.com/spring-projects/spring-boot.git
+RUN cd /spring-boot && ./gradlew build
 CMD ["/bin/sh"]
-
-# RUN cd spring-boot && ./gradlew build
-
 
