@@ -16147,3 +16147,52 @@ Maven test passed.
 20200819_183804 - Tests completed successfully.
 
 
+[master a0e01e4] Automatic build 20200819_183801
+ 1 file changed, 49 insertions(+)
+20200819_183808 - git completed successfully.
+The push refers to repository [docker.io/blairy/java8]
+9a775a630007: Preparing
+9b2ec0729f0a: Preparing
+a57605e50f90: Preparing
+0d218d970945: Preparing
+a57605e50f90: Layer already exists
+0d218d970945: Layer already exists
+9b2ec0729f0a: Layer already exists
+9a775a630007: Layer already exists
+20200819_183801: digest: sha256:d0d1ca8532ed2dae2eb4e1e014d4c16bf77ffead279a14b8e6d7eae111148d73 size: 1168
+20200819_183816 - Docker push completed successfully.
+
+
+20200819_183816 - All completed successfully
+20200819_193801 - Starting Build.
+
+Sending build context to Docker daemon  9.172MB
+Step 1/5 : FROM alpine:20200626@sha256:156f59dc1cbe233827642e09ed06e259ef6fa1ca9b2e29d52ae14d5e7b79d7f0
+ ---> 3c791e92a856
+Step 2/5 : RUN apk add --no-cache     openssh-client     curl     git     util-linux     openjdk8     maven     spring-boot-openrc     junit     jetty-runner     jetty-runner-openrc
+ ---> Using cache
+ ---> 6adae56447bc
+Step 3/5 : RUN git clone https://github.com/spring-projects/spring-boot.git
+ ---> Using cache
+ ---> c594ac154c52
+Step 4/5 : RUN cd /spring-boot && ./gradlew build
+ ---> Using cache
+ ---> 01ef60a47201
+Step 5/5 : CMD ["/bin/sh"]
+ ---> Using cache
+ ---> e5772351e007
+Successfully built e5772351e007
+Successfully tagged blairy/java8:20200819_193801
+20200819_193801 - Build completed successfully.
+
+
+Java test passed.
+Apache Maven 3.6.3 (cecedd343002696d0abb50b32b541b8a6ba2883f)
+Maven home: /usr/share/java/maven-3
+Java version: 1.8.0_252, vendor: IcedTea, runtime: /usr/lib/jvm/java-1.8-openjdk/jre
+Default locale: en_US, platform encoding: UTF-8
+OS name: "linux", version: "5.7.0-2-amd64", arch: "amd64", family: "unix"
+Maven test passed.
+20200819_193803 - Tests completed successfully.
+
+
