@@ -30,7 +30,7 @@ timestp=$(timestamp)
 logger "Starting Build.\n"
 
 # Build the image using timestamp as tag.
-if sudo /usr/bin/docker build /home/docker/java8_docker_image -t docker.io/blairy/java8:$timestp | tee -a $log; then
+if sudo /usr/bin/docker build /home/docker/java8_docker_image -t docker.io/blairy/java8:$timestp --no-cache --rm --pull | tee -a $log; then
     logger "Build completed successfully.\n\n"
 else
     logger "Build FAILED!! Aborting.\n\n"
@@ -54,6 +54,7 @@ git () {
     $git add --all | tee -a $log || except "git add failed!"
     $git commit -a -m 'Automatic build '$timestp | tee -a $log || except "git commit failed!"
     $git push | tee -a $log || except "git push failed!"
+    $git gc --prune
 }
 
 # Run the git transactions
@@ -73,7 +74,7 @@ else
 fi
 
 # Prune
-/usr/bin/git gc --prune
+cd /home/docker/java8_docker_image/ && /usr/bin/git gc --prune
 
 # All completed successfully
 logger "All completed successfully"
